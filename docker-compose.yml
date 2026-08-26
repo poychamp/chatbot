@@ -1,0 +1,12 @@
+name: chatbot
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: docker/${DJANGO_ENV:-local}/Dockerfile
+    env_file: .env
+    ports:
+      - "${DOCKER_HOST_PORT:-8000}:8000"
+    volumes:
+      - ./:/app
