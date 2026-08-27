@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat</title>
+</head>
+<body>
+  <div id="app">Vue did not mount. Is `npm run dev` running?</div>
+
+  {{ initial_state|json_script:"initial-state" }}
+
+  <script type="module" src="{{ vite_dev_server_url }}/@vite/client"></script>
+  <script type="module" src="{{ vite_dev_server_url }}/assets/pages/chat/main.js"></script>
+</body>
+</html>
